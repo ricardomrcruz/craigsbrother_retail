@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 export const metadata = {
-  title: 'LesMoches',
+  title: 'Le.Moche.',
   description: 'Privatized Ads',
 }
 
