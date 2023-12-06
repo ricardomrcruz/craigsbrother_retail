@@ -1,6 +1,9 @@
 "use client"
 import TopMenu from "./inc/TopMenu"
 import MainHeader from "./inc/MainHeader"
+import SubMenu from "./inc/SubMenu"
+import Footer from "./inc/Footer"
+
 
 export default function MainLayout({ children }) {
     return (
@@ -11,6 +14,11 @@ export default function MainLayout({ children }) {
 
                 <TopMenu/>
                 <MainHeader/>
+                <SubMenu/>
+                
+                {children}
+                
+                <Footer/>
               </div>
             </div>
         
