@@ -18,23 +18,18 @@ export default function Product({product}){
                 {product?.url ? <img className="rounded cursor-pointer" 
                 src={product.url+'/190/'} /> :null}
 
-                <div className="pt-2 px-1">
+                <div className="pt-2 px-1"> 
 
                     <div className="font-semibold text-[15px] hover:underline cursor-pointer">{product?.title}</div>
+                
                     <div className="font-extrabold">{(product?.price / 100).toFixed(2)}</div>
+                
                 </div>
-
-        </Link>
+npm, 
+        </Link> 
         
         
-        
-        
-        
-        
-        
-        
-        
-        
+  
         </>
        
     )
