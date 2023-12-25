@@ -23,8 +23,14 @@ export default function Product({product}){
                     <div className="font-semibold text-[15px] hover:underline cursor-pointer">{product?.title}</div>
                 
                     <div className="font-extrabold">
-                            ${(product?.price / 100).toFixed(2)}
+                            {(product?.price / 100).toFixed(2)}
                         </div>
+
+                    <div className="relative flex items-center text-[12px]">
+                        <div className="line-through">€{((product?.price * 1.2) / 100).toFixed(2)}</div>
+                        <div className="px-2">- </div>
+                        <div className="line-through">20%</div>
+                    </div>
                 
                 </div>
 

@@ -29,14 +29,10 @@ export default function Home() {
       description: "Lorem Ipsum is sbycuile to rtide in sidewalks yuofdkgjhfdkhgdikjdfdfdgnsbfgjhsu know nd typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.",
       url:"https://picsum.photos/id/10",
       price: 177
-    }
-
-
+    },
 
 
   ]
-  
-  
   
   return (
     <MainLayout>
@@ -47,7 +43,7 @@ export default function Home() {
 
                 <div className="text-2xl font-bold mt-4 mb-6 px-4">Products</div>
 
-                <div className="grid  grids-cols-5 gap-4">
+                <div className="grid  grid-cols-5 gap-4">
                   {products.map(product =>( 
                     <Product key={product.id} product={product} /> 
                   ))}
