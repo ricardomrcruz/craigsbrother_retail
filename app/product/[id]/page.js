@@ -60,7 +60,7 @@ export default function Product({ params }) {
 
 
                                     <button className=" text-white py-2 px-20 rounded-full cursor-pointer">
-                                            
+                                            Add to Cart
                                     </button>
                                 </div>
                             </div>
