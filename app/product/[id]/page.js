@@ -16,7 +16,7 @@ export default function Product({ params }) {
   return (
     <>
       <MainLayout>
-        <div className="max-w-width[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <div className="flex px-4 py-10">
             {product?.url ? (
               <img className="w-[40%] rounded-lg" src={product?.url + "/280"} />

@@ -3,6 +3,7 @@
 import MainLayout from './layouts/MainLayout';
 import CarouselComp from './components/CarouselComp';
 import Product from './components/Product';
+import SimilarProducts from './components/SimilarProducts';
 
 export default function Home() {
   
