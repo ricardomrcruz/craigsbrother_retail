@@ -2,37 +2,38 @@
 
 import Link from "next/link";
 
-export default function CartItem({ product }) {
+export default function CheckoutItem({ product }) {
   return (
     <>
-      <div className="relative flex justify-start my-2 border w-full p-6">
-        <img
-          src={product?.url + "/150/"}
-          className="rounded-md w-[150px] h-[150px]"
-          alt="pic"
-        />
+      <div className="flex justify-start rounded-lg mb-2 border p-4">
+            <img className="rounded-md w-[150px] h-[150px]" src={product.url+'/150'} />
 
-        <div className="overflow-hidden pl-2 w-full">
-          <div className="flex items-center justify-between w-full">
-            <div className="flex items-center font-semibold justify-between w-[400px] text-[16px] underline">
-              {product?.title}
+            <div className="overflow-hidden pl-2">
+                <div className="font-semibold">
+                    { product.title }
+                </div>
+
+                <div className="text-lg font-semibold ">
+                    <span className="font-bold">£{(product.price / 100).toFixed(2)}</span>
+                </div>
+
+                <div className="relative flex items-center text-[14px] text-gray-500">
+                    <div className="line-through">£{((product.price * 1.2) / 100).toFixed(2)}</div>
+                    <div className="px-2">-</div>
+                    <div className="line-through">20%</div>
+                </div>
+
+                <div className="text-sm mt-2">
+                    {product.description.substring(0, 130)}...
+                </div>
+
+                {pathname == '/cart' ?
+                    <div className="text-sm mt-2 w-full flex justify-end underline text-blue-500 cursor-pointer">
+                        Remove
+                    </div>
+                : null}
             </div>
-            <div className="font-bold text-lg">
-              € {(product?.price / 100).toFixed(2)}
-            </div>
-          </div>
-
-          <div className="font-semibold mt-2">NEW</div>
-
-          <div className="text-sm mt-2">
-            {product?.description.substring(0, 150)}...
-          </div>
-
-          <div className="absolute right-0 bottom-0 p-4 text-sm">
-            <div className="underline text-blue-500">Remove</div>
-          </div>
         </div>
-      </div>
     </>
   );
 }
