@@ -4,7 +4,14 @@ import MainLayout from "../layouts/MainLayout";
 import CheckoutItem from "../components/CheckoutItem";
 
 export default function Checkout() {
-
+  const product = {
+    id: 1,
+    title: "brown leather bag",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.",
+    url: "https://picsum.photos/id/3",
+    price: 250,
+  };
 
   return (
     <>
@@ -18,22 +25,53 @@ export default function Checkout() {
                 <div className="text-xl font-semibold mb-2">
                   Shipping Address
                 </div>
+
+                <div>
+                  <ul className="text-sm mt-2">
+                    <li>Name: Test</li>
+                    <li>Address: Test</li>
+                    <li>Zipcode: Test</li>
+                    <li>City: Test</li>
+                    <li>Country: Test</li>
+                  </ul>
+                </div>
               </div>
 
-              <div>
-                <ul className="text-sm mt-2">
-                  <li>Name: Test</li>
-                  <li>Address: Test</li>
-                  <li>Zipcode: Test</li>
-                  <li>City: Test</li>
-                  <li>Country: Test</li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-lg mt-4">
+              <div id="Items" className="bg-white rounded-lg mt-4">
                 <CheckoutItem key={product.id} product={product} />
               </div>
             </div>
+
+            <div className="relative -top-[6px] w-[35%] border rounded-lg">
+                <div>Shipping:</div>
+                <div>Free</div>
+            </div>
+
+            <div className="border-t" />
+
+            <div className="flex items-center justify-between my-4" >
+                <div className="font-semibold"> Order total: </div>
+                <div className="text-2xl font-semibold">
+                      €12.99
+                </div>
+            </div>
+
+            <form >
+                <div className="border border-gray-500 p-2 rounded-sm" id="card-element"/>
+                <p
+                    id="card-error"
+                    role="alert"
+                    className="text-red-700 text-center font-semibold relative top-2"
+                    >
+
+                </p>
+
+        
+                
+            </form>
+
+
+
           </div>
         </div>
       </MainLayout>
