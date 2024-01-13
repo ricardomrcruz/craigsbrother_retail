@@ -87,6 +87,11 @@ export default function Checkout() {
                                     </form>
               </div>
 
+              <div className="flex items-center p-4 justify-center gap-2 border-t">
+                    <img width={120} src="/images/SOME.png" alt="logo"  />
+                    <div className="font-light mb-2 mt-2">MONEY BACK GUARANTEE</div>
+              </div>
+
 
 
             </div>

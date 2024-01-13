@@ -9,26 +9,26 @@ export default function MainHeader () {
         
         <div id="MainHeader" className="border-b ">
             <div className="flex items-center justify-between w-full mx-auto max-w-[1200px]">
-                <div className="flex items-center w-full bg-[#e2cfea]">
+                <div className="flex items-center w-full bg-[#6247AA]">
                     <div className="flex lg:justify-start justify-between gap-10 max-w-[1150px] w-full mx-auto px-3 py-5 ">
                         <Link href="/">
-                            <img src="/images/logo.svg" width="120" alt="" />
+                            <img src="/images/SOME.png" width="150" alt="" />
                         </Link>
                         <div className="w-full">
                             <div className="relatove">
                                 <div className="flex items-center">
-                                    <div className="relative flex items-center border-2  border-gray-500 w-full p-2">
+                                    <div className="relative flex items-center border-2  border-white-300 w-full p-2">
                                         <button className="flex items-center">
                                                 <AiOutlineSearch size={22}/>
                                        </button>
 
                                        <input type="text "
                                        className="w-full
-                                       placeholder-gray-400
+                                       placeholder-white
                                        text-sm
                                        pl-3
                                        focus:outline-none
-                                       bg-[#e2cfea]"
+                                       bg-[#6247AA]"
                                        placeholder="Search"
 
                                         />
