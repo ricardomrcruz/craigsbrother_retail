@@ -74,11 +74,12 @@ export default function Orders() {
                           href="/"
                           className="py-1 hover:underline text-blue-500 font-bold "
                         >
+                            <img src={item.url+'/122'} className="rounded"  alt="pic"/>
+                            {item?.title}
 
 
                         </Link>
-
-                        
+                            
                       </div>
                     ))}
                   </div>
