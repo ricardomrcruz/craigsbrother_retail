@@ -4,6 +4,7 @@
 
 import MainLayout from "../layouts/MainLayout"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
+import TextInput from "../components/TextInput"
 
 export default function Address() {
 
@@ -23,12 +24,28 @@ export default function Address() {
                             <form>
                                 
                                 <div className="mb-4">
-                                    
+                                    <TextInput 
 
+                                        className="w-full"
+                                        string={'TEST'}
+                                        placeholder="Name"
 
-
-                             
+                                    />
                                 </div>
+                                <button
+                                    className="
+                                    mt-6
+                                    w-full
+                                    text-white
+                                    text-lg
+                                    font-semibold
+                                    p-3
+                                    rounded
+                                    bg-blue-600
+                                    "
+                                >
+                                    Update Address
+                                </button>
 
                             </form>
 
