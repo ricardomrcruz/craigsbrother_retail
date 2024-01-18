@@ -30,8 +30,8 @@ export default function Address() {
                                     font-semibold
                                     p-3
                                     rounded
-                                    bg-blue-600
-                  "
+                                    bg-blue-600 
+                                    "
               >
                 Update Address
               </button>
