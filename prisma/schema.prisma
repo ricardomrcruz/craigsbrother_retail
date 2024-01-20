@@ -31,7 +31,7 @@ model Orders {
   city       String
   country    String
   total      String
-  created_at DateTime?   @default(now()) @db.Timestampz(6)
+  created_at DateTime?   @default(now()) @db.Timestamptz(6)
   orderItem  OrderItem[]
 }
 
@@ -39,7 +39,7 @@ model OrderItem {
   id         Int       @id @default(autoincrement())
   order_id   Int
   product_id Int
-  created_at DateTime? @default(now()) @db.Timetsampz(6)
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
   order      Orders    @relation(fields: [order_id], references: [id])
   product    Products  @relation(fields: [product_id], references: [id])
 }
@@ -50,6 +50,6 @@ model Products {
   description String
   url String
   price Int 
-  created_at DateTime? @default(now()) @db.Timestampz(6)
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
   OrderItem OrderItem[]
 }
