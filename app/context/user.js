@@ -81,5 +81,15 @@ const Provider = ({ children }) => {
   }
 
   const exposed = { user, id, email, name, picture, signOut };
+
+  return <Context.Provider value={exposed}>{children}</Context.Provider>
+
     
 }
+
+
+export const useUser = () => useContext(Context);
+
+export default Provider;
+
+
