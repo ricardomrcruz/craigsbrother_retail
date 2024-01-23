@@ -8,12 +8,15 @@ import { supabase } from "@supabase/auth-ui-shared";
 const Context = createContext();
 
 const Provider = ({ children }) => {
-  const router = useRouter();
+  
+  const router = useRouter()
 
-  const [user, useRouter] = useState(null);
+  const [user, setUser] = useState(null);
   const [id, setId] = useState(null);
   const [email, setEmail] = useState(null);
   const [name, setName] = useState(null);
+  const [picture, setPicture] = useState(null);
+
 
   const supabaseClient = createClientComponentClient();
 
@@ -55,6 +58,10 @@ const Provider = ({ children }) => {
     clearUser();
     router.push("/");
   };
+
+
+
+
 
   const clearUser = () => {
     setUser(null);
