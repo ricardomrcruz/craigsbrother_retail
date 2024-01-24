@@ -8,14 +8,15 @@ import { useEffect, useState } from "react";
 export default function TopMenu() {
   const user = useUser();
 
-  const [isMenu, setIsMenu] = useState(false)
+  const [isMenu, setIsMenu] = useState(false);
 
   const isLoggedIn = () => {
     if (user && user?.id) {
       return (
-        <button 
-        onClick={() => !isMenu ? setIsMenu(true) : setIsMenu(false)}
-        className="flex items-center gap-2 hover:underliune cursor-pointer">
+        <button
+          onClick={() => (!isMenu ? setIsMenu(true) : setIsMenu(false))}
+          className="flex items-center gap-2 hover:underliune cursor-pointer"
+        >
           <div>Hi, {user.name}</div>
           <BsChevronDown />
         </button>
@@ -47,12 +48,12 @@ export default function TopMenu() {
               <div
                 id="AuthDropdown"
                 className={`hidden absolute bg-white w-[200px] text-[#333333] z-40 top-[20px] left-0 border shadow-lg
-                ${isMenu ? 'visible' : 'hidden'}
+                ${isMenu ? "visible" : "hidden"}
                 `}
               >
                 <div className="flex items-center justify-start gap-1 p-3">
-                  <img width={50} src="https://picsum.photos/200" />
-                  <div className="font-bold text-[13px]"> Johnny Breyvo</div>
+                  <img width={50} src={user?.picture} />
+                  <div className="font-bold text-[13px]">{user?.name}</div>
                 </div>
 
                 <div className="border-b">
