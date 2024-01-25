@@ -15,7 +15,7 @@ export default function TopMenu() {
       return (
         <button
           onClick={() => (!isMenu ? setIsMenu(true) : setIsMenu(false))}
-          className="flex items-center gap-2 hover:underliune cursor-pointer"
+          className="flex items-center gap-2 hover:underline cursor-pointer"
         >
           <div>Hi, {user.name}</div>
           <BsChevronDown />
@@ -47,9 +47,10 @@ export default function TopMenu() {
 
               <div
                 id="AuthDropdown"
-                className={`hidden absolute bg-white w-[200px] text-[#333333] z-40 top-[20px] left-0 border shadow-lg
+                className={`
+                absolute bg-white w-[200px] text-[#333333] z-40 top-[20px] left-0 border shadow-lg
                 ${isMenu ? "visible" : "hidden"}
-                `}
+            `}
               >
                 <div className="flex items-center justify-start gap-1 p-3">
                   <img width={50} src={user?.picture} />
@@ -61,7 +62,13 @@ export default function TopMenu() {
                     <li className="text-[11px] py-2 px-4 w-full hover:underline text-blue-500 hover:text-blue-600 cursor-pointer">
                       <Link href="/orders">My orders</Link>
                     </li>
-                    <li className="text-[11px] py-2 px-4 w-full hover:underline text-blue-500 hover:text-blue-600 cursor-pointer">
+                    <li
+                      onClick={() => {
+                        user.signOut();
+                        setIsMenu(false);
+                      }}
+                      className="text-[11px] py-2 px-4 w-full hover:underline text-blue-500 hover:text-blue-600 cursor-pointer"
+                    >
                       Sign Out
                     </li>
                   </ul>
